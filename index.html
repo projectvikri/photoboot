@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Web Photobooth</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="app">
+        <!-- SCREEN 1: START -->
+        <section id="screen-idle" class="scene">
+            <div class="content">
+                <h1 class="logo">PHOTO<span>BOOTH</span></h1>
+                <p>Siapkan gaya terbaikmu!</p>
+                <button id="btn-start" class="btn-main">MULAI SESI</button>
+            </div>
+        </section>
+
+        <!-- SCREEN 2: CAPTURE -->
+        <section id="screen-capture" class="scene hidden">
+            <div class="camera-box">
+                <div id="countdown"></div>
+                <div id="flash"></div>
+                <video id="video" autoplay playsinline></video>
+                <!-- Frame overlay transparan bisa diletakkan di sini nanti -->
+            </div>
+            <div class="info">Sesi Pemotretan Sedang Berlangsung...</div>
+        </section>
+
+        <!-- SCREEN 3: REVIEW & DOWNLOAD -->
+        <section id="screen-review" class="scene hidden">
+            <h2>HASIL FOTO</h2>
+            <div class="result-container">
+                <canvas id="main-canvas"></canvas>
+            </div>
+            <div class="controls">
+                <button id="btn-retake" class="btn-secondary">ULANGI</button>
+                <a id="btn-download" class="btn-main">SIMPAN FOTO</a>
+                <button id="btn-finish" class="btn-accent">SELESAI</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
